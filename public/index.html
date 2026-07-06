@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spoken English — تسجيل الدخول</title>
+  <meta name="description" content="تسجيل الدخول إلى نظام إدارة حضور وغياب الطلاب لمنصة Spoken English.">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="login-page">
+
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div class="login-header">
+        <img src="./logo.png" alt="Spoken English Logo" class="login-logo-img">
+        <h1 class="login-title">Spoken English</h1>
+        <p class="login-subtitle">نظام إدارة الحضور والغياب</p>
+        <p class="login-role-tag">بوابة المعلمين</p>
+      </div>
+
+      <!-- Error Alerts Banner -->
+      <div class="error-banner" id="login-error-msg"></div>
+
+      <!-- Login Form -->
+      <form class="login-form" id="login-form">
+        <div class="input-group">
+          <label class="input-label" for="login-email">البريد الإلكتروني</label>
+          <input type="email" id="login-email" class="input-field" placeholder="name@spoken.com" required autocomplete="username">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label" for="login-password">كلمة المرور</label>
+          <input type="password" id="login-password" class="input-field" placeholder="••••••••" required autocomplete="current-password">
+        </div>
+
+        <button type="submit" class="btn-login" id="btn-login-submit">
+          <span id="btn-login-text">تسجيل الدخول</span>
+        </button>
+      </form>
+
+      <div class="login-demo-hint">
+        <span class="login-demo-label">حساب تجريبي:</span>
+        <code class="login-demo-code">teacher@spoken.com</code>
+        <span class="login-demo-sep">/</span>
+        <code class="login-demo-code">password123</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- Authentication Logic Script -->
+  <script src="./js/auth.js"></script>
+</body>
+</html>

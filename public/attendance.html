@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spoken English — تسجيل الحضور والغياب</title>
+  <meta name="description" content="تسجيل حضور وغياب الطلاب لجلسة المادة الدراسية المحددة.">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Secured Navigation Header -->
+  <header>
+    <div class="header-container">
+      <a href="./dashboard.html" class="logo-section">
+        <img src="./logo.png" alt="Spoken English" class="nav-logo-img">
+        <h1>Spoken English</h1>
+      </a>
+
+      <div class="nav-controls">
+        <a href="./dashboard.html" class="nav-link">لوحة التحكم</a>
+        <a href="./subjects.html" class="nav-link active">المواد الدراسية</a>
+
+        <div class="user-profile-badge">
+          👤 <span class="user-name" id="teacher-name-display">المعلم</span>
+        </div>
+
+        <button type="button" class="btn-logout" id="btn-logout">تسجيل الخروج</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Attendance Page Main Content -->
+  <main>
+    <!-- Subject Info Panel -->
+    <div class="section-header">
+      <div>
+        <h2 class="section-title" id="subject-title">جاري تحميل المادة...</h2>
+        <p class="section-subtitle">
+          <span id="lecture-day">اليوم: ---</span>
+          &nbsp;|&nbsp;
+          <span id="lecture-date">التاريخ: ---</span>
+        </p>
+      </div>
+      <a href="./subjects.html" class="btn-back">← العودة للمواد</a>
+    </div>
+
+    <!-- Attendance Form Panel -->
+    <div class="attendance-panel">
+      <div class="attendance-panel-header">
+        <h3 class="attendance-panel-title">قائمة الطلاب المسجلين</h3>
+        <span class="student-count-badge" id="student-count">0 طلاب</span>
+      </div>
+
+      <form id="attendance-form">
+        <div id="students-container">
+          <!-- Rows will be injected by attendance.js -->
+          <div class="loading-message">
+            <div class="loading-spinner"></div>
+            <p>جاري تحميل قائمة الطلاب...</p>
+          </div>
+        </div>
+
+        <!-- Save Bar -->
+        <div class="save-panel">
+          <p class="save-info">راجع الحضور قبل الحفظ النهائي</p>
+          <button type="submit" class="btn-save" id="btn-save-attendance">
+            <div class="spinner" id="btn-save-spinner"></div>
+            <span id="btn-save-text">حفظ تقرير الحضور</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Toast Container (dynamic) -->
+  <div id="toast-container"></div>
+
+  <!-- Scripts: auth first for session guard, then page logic -->
+  <script src="./js/auth.js"></script>
+  <script src="./js/attendance.js"></script>
+</body>
+</html>

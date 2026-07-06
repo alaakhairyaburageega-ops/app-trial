@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spoken English — جدول المادة</title>
+  <meta name="description" content="عرض الجدولة الأسبوعية ومواعيد الحصص لتسجيل الحضور.">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Secured Navigation Header -->
+  <header>
+    <div class="header-container">
+      <a href="./dashboard.html" class="logo-section">
+        <img src="./logo.png" alt="Spoken English" class="nav-logo-img">
+        <h1>Spoken English</h1>
+      </a>
+      
+      <div class="nav-controls">
+        <a href="./dashboard.html" class="nav-link">لوحة التحكم</a>
+        <a href="./subjects.html" class="nav-link active">المواد الدراسية</a>
+        
+        <div class="user-profile-badge">
+          👤 <span class="user-name" id="teacher-name-display">المعلم</span>
+        </div>
+        
+        <button type="button" class="btn-logout" id="btn-logout">تسجيل الخروج</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main>
+    <!-- Back to subjects breadcrumb -->
+    <div style="margin-bottom: 0.5rem;">
+      <a href="./subjects.html" style="color: var(--primary-blue); font-weight: 600; text-decoration: none; font-size: 0.95rem;">← العودة إلى المواد الدراسية</a>
+    </div>
+
+    <div class="section-header">
+      <div>
+        <h2 class="section-title" id="subject-title-display">المادة الدراسية</h2>
+        <p class="section-subtitle">اختر اليوم الدراسي المطلوب من الجدول الأسبوعي لتسجيل حضور الطلاب</p>
+      </div>
+    </div>
+
+    <!-- Timetable Weekdays pills container -->
+    <section class="schedule-pills" id="schedule-pills-container">
+      <!-- Loading Skeleton Message -->
+      <div class="loading-message">
+        <div class="loading-spinner"></div>
+        <p>جاري تحميل مواعيد الحصص وجدول المادة...</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="./js/auth.js"></script>
+  <script src="./js/schedule.js"></script>
+</body>
+</html>

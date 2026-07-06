@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spoken English — المواد الدراسية</title>
+  <meta name="description" content="استعراض قائمة المواد التعليمية المخصصة للمعلم في منصة Spoken English.">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Secured Navigation Header -->
+  <header>
+    <div class="header-container">
+      <a href="./dashboard.html" class="logo-section">
+        <img src="./logo.png" alt="Spoken English" class="nav-logo-img">
+        <h1>Spoken English</h1>
+      </a>
+      
+      <div class="nav-controls">
+        <a href="./dashboard.html" class="nav-link">لوحة التحكم</a>
+        <a href="./subjects.html" class="nav-link active">المواد الدراسية</a>
+        
+        <div class="user-profile-badge">
+          👤 <span class="user-name" id="teacher-name-display">المعلم</span>
+        </div>
+        
+        <button type="button" class="btn-logout" id="btn-logout">تسجيل الخروج</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main>
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">المواد الدراسية الخاصة بك</h2>
+        <p class="section-subtitle">اختر مادة دراسية لاستعراض جدول أيام الحصص وتسجيل حضور الطلاب</p>
+      </div>
+    </div>
+
+    <!-- Subjects Grid Container -->
+    <section class="subjects-grid" id="subjects-grid" aria-label="Subjects Grid">
+      <!-- Loading Skeleton Message -->
+      <div class="loading-message">
+        <div class="loading-spinner"></div>
+        <p>جاري تحميل قائمة المواد الدراسية...</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="./js/auth.js"></script>
+  <script src="./js/subjects.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "spoken-english-attendance",
+  "version": "1.0.0",
+  "description": "Student Attendance App for Spoken English",
+  "main": "index.js",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "pg": "^8.22.0"
+  }
+}

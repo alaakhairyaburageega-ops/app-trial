@@ -1,0 +1,11 @@
+# Netlify Configuration File
+# Configures the publish directory and serverless functions folder for development and deployment
+
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[dev]
+  publish = "public"
+  functions = "netlify/functions"
+  port = 8888

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spoken English — لوحة التحكم</title>
+  <meta name="description" content="لوحة تحكم إحصائيات حضور وغياب الطلاب لمنصة Spoken English.">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Secured Navigation Header -->
+  <header>
+    <div class="header-container">
+      <a href="./dashboard.html" class="logo-section">
+        <img src="./logo.png" alt="Spoken English" class="nav-logo-img">
+        <h1>Spoken English</h1>
+      </a>
+      
+      <div class="nav-controls">
+        <a href="./dashboard.html" class="nav-link active">لوحة التحكم</a>
+        <a href="./subjects.html" class="nav-link">المواد الدراسية</a>
+        
+        <div class="user-profile-badge">
+          👤 <span class="user-name" id="teacher-name-display">المعلم</span>
+        </div>
+        
+        <button type="button" class="btn-logout" id="btn-logout">تسجيل الخروج</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Content -->
+  <main>
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">لوحة التحكم والمؤشرات الإحصائية</h2>
+        <p class="section-subtitle">نظرة عامة على حضور الطلاب ونسب التفاعل ومؤشرات الغياب</p>
+      </div>
+    </div>
+
+    <!-- Quick Stats Metric Cards -->
+    <section class="dashboard-metrics" aria-label="Quick Metrics">
+      <div class="metric-card metric-total">
+        <div class="metric-icon">📚</div>
+        <div class="metric-info">
+          <span class="metric-value" id="count-subjects">0</span>
+          <span class="metric-label">المواد النشطة</span>
+        </div>
+      </div>
+      
+      <div class="metric-card metric-present">
+        <div class="metric-icon">👥</div>
+        <div class="metric-info">
+          <span class="metric-value" id="count-students">0</span>
+          <span class="metric-label">إجمالي الطلاب</span>
+        </div>
+      </div>
+      
+      <div class="metric-card metric-absent">
+        <div class="metric-icon">📈</div>
+        <div class="metric-info">
+          <span class="metric-value" id="attendance-rate">0%</span>
+          <span class="metric-label">معدل الحضور العام</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Analysis Grid -->
+    <section class="dashboard-grid" aria-label="Detailed Analysis">
+      <!-- Weekly Trend Visualizer -->
+      <div class="dashboard-panel">
+        <h3 class="input-label" style="font-size: 1.1rem; color: var(--primary-blue);">معدل الحضور الأسبوعي (Attendance Trend)</h3>
+        <div class="chart-wrapper" id="trend-chart">
+          <!-- Bars will be injected dynamically via dashboard.js -->
+        </div>
+      </div>
+
+      <!-- Warning & Alerts Panel -->
+      <div class="dashboard-panel">
+        <h3 class="input-label" style="font-size: 1.1rem; color: var(--primary-red);">تنبيهات الغياب المرتفع (High Absenteeism Alerts)</h3>
+        <div class="alerts-list" id="alerts-list">
+          <!-- Alerts list will be populated dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="./js/auth.js"></script>
+  <script src="./js/dashboard.js"></script>
+</body>
+</html>
